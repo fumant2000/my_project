@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
 class TestController {
 
@@ -13,7 +14,7 @@ class TestController {
    
     }
     /**
-     * @Route("/test/{age<\d+>?9}", name="test, method={"GET","POST"}, scheme={"http", "https"})
+     * @Route("/test/{age<\d+>?9}", name="test", methods={"GET","POST"}, schemes={"http", "https"})
      */
 
     public function test(Request $request, $age)
